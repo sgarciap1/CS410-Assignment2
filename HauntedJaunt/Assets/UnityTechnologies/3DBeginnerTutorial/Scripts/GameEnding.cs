@@ -1,3 +1,4 @@
+using Palmmedia.ReportGenerator.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,11 +13,13 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource caughtAudio;
+    public float position;
 
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
     float m_Timer;
     bool m_HasAudioPlayed;
+    public float m_DistanceToFinish;
 
     void Update()
     {
@@ -28,6 +31,12 @@ public class GameEnding : MonoBehaviour
         {
             EndLevel (caughtBackgroundImageCanvasGroup, true, caughtAudio);
         }
+    }
+
+    private void FixedUpdate()
+    {
+        float dot_product = Vector3.Dot(player.transform.position, gameObject.transform.position);
+        m_DistanceToFinish = Mathf.Acos(dot_product / (Mathf.Abs(player.transform.position.magnitude) * Mathf.Abs(gameObject.transform.position.magnitude)));
     }
 
     void OnTriggerEnter (Collider other)

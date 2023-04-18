@@ -785,6 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edecb8f9a1c75b4f844293340d971a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alphaChanger: 0.01
   turnSpeed: 20
 --- !u!82 &1788842719295090833
 AudioSource:

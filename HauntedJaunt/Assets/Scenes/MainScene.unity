@@ -261,6 +261,8 @@ MonoBehaviour:
   exitAudio: {fileID: 1762644778}
   caughtBackgroundImageCanvasGroup: {fileID: 409897920}
   caughtAudio: {fileID: 1453012576}
+  position: 0
+  m_DistanceToFinish: 0
 --- !u!65 &88092930
 BoxCollider:
   m_ObjectHideFlags: 0
