@@ -13,13 +13,15 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource caughtAudio;
-    public float position;
+    //public float position;
+    public float Dot;
+    public float ang;
 
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
     float m_Timer;
     bool m_HasAudioPlayed;
-    public float m_DistanceToFinish;
+    //public float m_DistanceToFinish;
 
     void Update()
     {
@@ -31,12 +33,28 @@ public class GameEnding : MonoBehaviour
         {
             EndLevel (caughtBackgroundImageCanvasGroup, true, caughtAudio);
         }
+
     }
 
     private void FixedUpdate()
     {
-        float dot_product = Vector3.Dot(player.transform.position, gameObject.transform.position);
-        m_DistanceToFinish = Mathf.Acos(dot_product / (Mathf.Abs(player.transform.position.magnitude) * Mathf.Abs(gameObject.transform.position.magnitude)));
+        // Direction to end from player
+        Vector3 dirToTarget = (gameObject.transform.position - player.transform.position);
+        dirToTarget.Normalize();
+        Dot = Vector3.Dot(player.transform.forward, dirToTarget);
+
+        // OTHER
+        //Dot = dirToTarget.magnitude;
+        // 
+        //Vector3 v = transform.forward;
+        //v.Normalize();
+        //Dot = Vector3.Dot(v, dirToTarget);
+        //Dot = Mathf.Acos(Vector3.Dot(player.transform.forward.Normalize(), dirToTarget));
+        //ang = Mathf.Acos(Dot / (dirToTarget.magnitude * player.transform.forward.magnitude) ) * Mathf.Rad2Deg;
+        //
+        //ang = Mathf.Acos(Dot);
+        //Dot = Vector3.Dot(gameObject.transform.position, player.transform.position);
+        //ang = Mathf.Acos(Dot / (gameObject.transform.position.magnitude * player.transform.position.magnitude) ) * Mathf.Rad2Deg; 
     }
 
     void OnTriggerEnter (Collider other)

@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public float alphaChanger = .05f;
     public float turnSpeed = 20f;
     public float sprintTime = 5.0f;
+    /**/
+    //public Transform playerTransform;
+    //public Transform enemTranform;
 
     Animator m_Animator;
     Rigidbody m_Rigidbody;
@@ -89,6 +92,26 @@ public class PlayerMovement : MonoBehaviour
             interpolatedSpeed = (1.0f - alpha) * minSpeed + alpha * maxSpeed;
         }
     }
+
+
+
+    /*
+    void dotProduct()
+    {
+        Vector3 playerForward = playerTransform.forward;
+        Vector3 playerToEnemy = enemTransform.forward - playerTransform.position;
+
+        float dotPro = Vector3.Dot(playerForward, playerToEnemy)
+
+        if (dotPro >= 0) {
+            print("Forward");
+        }
+        else{
+            print("Behined ")
+        }
+    }
+
+    */
 
     void OnAnimatorMove ()
     {
