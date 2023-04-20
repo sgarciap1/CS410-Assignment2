@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float interpolatedSpeed;
     private float alpha;
     private bool canSprint;
+    
 
     public float alphaChanger = .05f;
     public float turnSpeed = 20f;
@@ -78,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
                 canSprint = false;
             }
             interpolatedSpeed = (1.0f - alpha) * minSpeed + alpha * maxSpeed;
+
         }
         else
         {
