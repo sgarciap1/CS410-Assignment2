@@ -788,6 +788,7 @@ GameObject:
   - component: {fileID: 604758674}
   - component: {fileID: 604758673}
   - component: {fileID: 604758672}
+  - component: {fileID: 604758675}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -5647,6 +5648,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &604758675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604758671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e9e521d1c53e544aa2354ffc1848c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &625611412
 GameObject:
   m_ObjectHideFlags: 0
@@ -5893,6 +5906,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 718693274}
     m_Modifications:
+    - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 921059301}
     - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
       propertyPath: player
       value: 
@@ -9768,6 +9785,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 718693274}
     m_Modifications:
     - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 2042265899}
+    - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 879563863553456102}
@@ -9990,6 +10011,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 718693274}
     m_Modifications:
     - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1470848924}
+    - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 879563863553456102}
@@ -9997,6 +10022,10 @@ PrefabInstance:
       propertyPath: gameEnding
       value: 
       objectReference: {fileID: 88092929}
+    - target: {fileID: 6498857022424351294, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
+      propertyPath: view_angle
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 9100494114927544399, guid: 6c6e6d20642807342aa89a4f5eb38af8, type: 3}
       propertyPath: m_Name
       value: Gargoyle
